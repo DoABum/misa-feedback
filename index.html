@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미사강변중학교 다면평가</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --color-background-primary: #ffffff;
+        --color-background-secondary: #f3f4f6;
+        --color-background-success: #d1fae5;
+        --color-text-primary: #111827;
+        --color-text-secondary: #6b7280;
+        --color-text-tertiary: #9ca3af;
+        --color-text-success: #065f46;
+        --color-text-danger: #dc2626;
+        --color-text-info: #2563eb;
+        --color-border-secondary: #e5e7eb;
+        --color-border-tertiary: #f0f2f5;
+        --border-radius-md: 8px;
+        --border-radius-lg: 12px;
+        --font-sans: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-background-primary: #1e2028;
+          --color-background-secondary: #2a2d35;
+          --color-background-success: #064e3b;
+          --color-text-primary: #e8eaf0;
+          --color-text-secondary: #9ba3af;
+          --color-text-tertiary: #6b7280;
+          --color-text-success: #6ee7b7;
+          --color-text-danger: #f87171;
+          --color-text-info: #93c5fd;
+          --color-border-secondary: #3a3f4e;
+          --color-border-tertiary: #2e3140;
+        }
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background: var(--color-background-primary);
+        color: var(--color-text-primary);
+        min-height: 100vh;
+      }
+
+      #root { min-height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
