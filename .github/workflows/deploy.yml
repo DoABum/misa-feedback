@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, misa-feedback]
+    branches: [misa-feedback]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -22,18 +23,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - run: npm ci
-
-      - run: npm run build
+      # 빌드 없이 정적 파일을 그대로 배포 (apps-script 폴더와 .github는 제외)
+      - name: Prepare site
+        run: |
+          mkdir _site
+          cp -r index.html config.js assets .nojekyll _site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
       - id: deployment
         uses: actions/deploy-pages@v4
