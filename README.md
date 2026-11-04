@@ -6,7 +6,7 @@
 | 파일 | 설명 |
 |---|---|
 | `index.html` | 사이트 첫 화면 |
-| `assets/app-20261104-3.js` | 사이트 프로그램 (입력 폼·점수 계산) |
+| `assets/app-20261104-4.js` | 사이트 프로그램 (입력 폼·점수 계산) |
 | `config.js` | 수합용 구글 Apps Script 주소 (`GAS_URL`) |
 | `apps-script/` | 구글 시트에 붙여 넣는 코드와 설정 방법 |
 | `.nojekyll` | GitHub Pages 설정용 빈 파일 (지우지 마세요) |
